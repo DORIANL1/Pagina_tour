@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
@@ -18,15 +18,15 @@
       <span class="logo-sub">RIVER ADVENTURE</span>
     </a>
     <div class="navlinks">
-      <nav><ul>
+      <nav id="mainNav"><ul>
         <li><a href="#inicio" class="active">Home</a></li>
         <li><a href="#tours">Tours</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#galeria">Gallery</a></li>
         <li><a href="#contacto">Contact</a></li>
       </ul></nav>
-      <button class="btn btn-outline" onclick="openModal()">Book Now ›</button>
-      <button class="menu-btn" aria-label="Menú">☰</button>
+      <button class="btn btn-outline btn-book-header" onclick="openModal()">Book Now ›</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
     </div>
   </div>
 </header>
@@ -104,7 +104,8 @@
         </div>
         <h3>Río Celeste</h3>
         <p>½ día de aventura</p>
-        <a href="#" class="tour-book" data-tour="Río Celeste" data-precio="18500" onclick="openModal(event,this)">Reservar ›</a>
+        <p class="tour-price">-----</p>
+        <a href="#" class="tour-book" data-tour="Río Celeste" onclick="openModal(event,this)">Reservar ›</a>
       </div>
       <div class="tour-card">
         <div class="tour-photo">
@@ -115,7 +116,8 @@
         </div>
         <h3>Río Familiar</h3>
         <p>½ día de aventura</p>
-        <a href="#" class="tour-book" data-tour="Río Familiar" data-precio="14000" onclick="openModal(event,this)">Reservar ›</a>
+        <p class="tour-price">-----</p>
+        <a href="#" class="tour-book" data-tour="Río Familiar" onclick="openModal(event,this)">Reservar ›</a>
       </div>
       <div class="tour-card">
         <div class="tour-photo">
@@ -126,7 +128,8 @@
         </div>
         <h3>Río Sunset</h3>
         <p>día completo</p>
-        <a href="#" class="tour-book" data-tour="Río Sunset" data-precio="24000" onclick="openModal(event,this)">Reservar ›</a>
+        <p class="tour-price">-----</p>
+        <a href="#" class="tour-book" data-tour="Río Sunset" onclick="openModal(event,this)">Reservar ›</a>
       </div>
       <div class="tour-card">
         <div class="tour-photo">
@@ -137,7 +140,8 @@
         </div>
         <h3>Río Clásico</h3>
         <p>½ día de aventura</p>
-        <a href="#" class="tour-book" data-tour="Río Clásico" data-precio="16000" onclick="openModal(event,this)">Reservar ›</a>
+        <p class="tour-price">-----</p>
+        <a href="#" class="tour-book" data-tour="Río Clásico" onclick="openModal(event,this)">Reservar ›</a>
       </div>
     </div>
     <div class="tours-cta">
@@ -181,8 +185,8 @@
     </div>
     <div>
       <h4>Contacto</h4>
-      <p>+506 ----- - ----</p>
-      <p>----@------.com</p>
+      <p>+506 8888-1234</p>
+      <p>info@viberiveradventure.com</p>
       <p>Costa Rica</p>
     </div>
     <div>
@@ -227,10 +231,10 @@
         <div class="field">
           <label for="tour">Ruta</label>
           <select id="tour">
-            <option data-precio="----">Río Celeste — ------</option>
-            <option data-precio="----">Río Familiar — ------</option>
-            <option data-precio="----">Río Sunset — ------</option>
-            <option data-precio="----">Río Clásico — ------</option>
+            <option>Río Celeste — -----</option>
+            <option>Río Familiar — -----</option>
+            <option>Río Sunset — -----</option>
+            <option>Río Clásico — -----</option>
           </select>
         </div>
         <div class="field">
@@ -243,17 +247,12 @@
         <input type="number" id="personas" min="1" max="20" value="2">
       </div>
 
-      <div class="res-total">
-        <span class="eyebrow">Total estimado</span>
-        <span class="amount" id="totalAmount">-----</span>
-      </div>
-
       <button type="submit" class="btn btn-moss" style="width:100%;justify-content:center;">Confirmar reserva</button>
       <div class="confirm-box" id="confirmBox">¡Listo! Recibimos tu solicitud. Te escribimos por WhatsApp o correo para confirmar cupo y forma de pago.</div>
     </form>
   </div>
 </div>
 
-<script src="js/script.js?v=3"></script>
+<script src="js/script.js?v=4"></script>
 </body>
 </html>

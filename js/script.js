@@ -1,3 +1,19 @@
+// ---------- MENU MÓVIL ----------
+const menuBtn = document.getElementById('menuBtn');
+const mainNav = document.getElementById('mainNav');
+menuBtn.addEventListener('click', () => {
+  const isOpen = mainNav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  menuBtn.textContent = isOpen ? '✕' : '☰';
+});
+mainNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.textContent = '☰';
+  });
+});
+
 // Header solid on scroll
 const header = document.getElementById('siteHeader');
 window.addEventListener('scroll', () => {
@@ -18,7 +34,6 @@ function openModal(e, el){
     [...tourSelect.options].forEach((opt, i) => {
       if (opt.text.startsWith(nombre)) tourSelect.selectedIndex = i;
     });
-    updateTotal();
   }
   modalOverlay.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -30,21 +45,6 @@ function closeModal(){
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
-
-// Estimated total
-const personasInput = document.getElementById('personas');
-const totalAmount = document.getElementById('totalAmount');
-function formatCRC(n){
-  return '₡' + n.toLocaleString('es-CR');
-}
-function updateTotal(){
-  const precio = parseInt(tourSelect.selectedOptions[0].getAttribute('data-precio'), 10);
-  const personas = Math.max(1, parseInt(personasInput.value || '1', 10));
-  totalAmount.textContent = formatCRC(precio * personas);
-}
-tourSelect.addEventListener('change', updateTotal);
-personasInput.addEventListener('input', updateTotal);
-updateTotal();
 
 // Mock submit (front-end only por ahora)
 document.getElementById('resForm').addEventListener('submit', (e) => {
