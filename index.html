@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibe River Adventure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <a href="#inicio" class="logo">
+      <span class="logo-main">VIBE</span>
+      <span class="logo-sub">RIVER ADVENTURE</span>
+    </a>
+    <div class="navlinks">
+      <nav><ul>
+        <li><a href="#inicio" class="active">Home</a></li>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#galeria">Gallery</a></li>
+        <li><a href="#contacto">Contact</a></li>
+      </ul></nav>
+      <button class="btn btn-outline" onclick="openModal()">Book Now ›</button>
+      <button class="menu-btn" aria-label="Menú">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">— Feel the flow</span>
+      <h1>Good vibes<br>wild rivers</h1>
+      <p class="script">Pura Vida</p>
+      <p class="lead">Vive la emoción del tubing en los ríos más increíbles de Costa Rica. Naturaleza, adrenalina y buena vibra en cada recorrido.</p>
+      <button class="btn btn-moss" onclick="openModal()">Book your adventure ›</button>
+    </div>
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="img/Logo.jpeg" alt="Logo de Vibe River Adventure Tours">
+    </div>
+  </div>
+  <svg class="torn-edge" viewBox="0 0 1200 60" preserveAspectRatio="none">
+    <path d="M0,25 L28,15 L47,13 L68,38 L87,21 L107,35 L127,20 L158,12 L179,11 L198,29 L223,13 L245,35 L267,12 L294,20 L318,30 L338,12 L362,39 L393,36 L425,33 L450,18 L470,37 L503,36 L530,20 L564,31 L592,14 L623,11 L643,34 L672,38 L704,20 L730,39 L750,17 L782,35 L811,14 L840,12 L861,29 L885,31 L910,35 L943,19 L975,37 L1001,15 L1027,34 L1057,19 L1077,19 L1102,21 L1135,17 L1162,19 L1193,38 L1221,13 L1200,25 L1200,60 L0,60 Z" fill="var(--moss)"/>
+  </svg>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="features">
+  <div class="wrap features-row">
+    <div class="feature">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-light)" stroke-width="1.4"><path d="M12 2C7 2 3 6 3 12c0 5 4 9 9 9-1-4 1-8 4-10 2-1 4-1 5 0-1-6-5-9-9-9z"/></svg>
+      <div><h3>100% Natural</h3><p>Ríos cristalinos rodeados de pura naturaleza.</p></div>
+    </div>
+    <div class="feature">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-light)" stroke-width="1.4"><circle cx="12" cy="9" r="5"/><path d="M7 13 5 21l7-3 7 3-2-8"/></svg>
+      <div><h3>Safe &amp; Fun</h3><p>Equipo de seguridad y guías expertos.</p></div>
+    </div>
+    <div class="feature">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-light)" stroke-width="1.4"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7 10 4h4l2 3"/><circle cx="12" cy="13.5" r="3.2"/></svg>
+      <div><h3>Unforgettable</h3><p>Momentos únicos que vas a querer repetir.</p></div>
+    </div>
+    <div class="feature">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-light)" stroke-width="1.4"><path d="M12 21s-7-6-7-11a7 7 0 1 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+      <div><h3>Local Experience</h3><p>Conecta con la esencia de Costa Rica.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="img/Tour.jpeg" alt="Vista aérea del río">
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">— About Us</span>
+      <h2>Vive la aventura</h2>
+      <p>Somos una empresa tica apasionada por la naturaleza y la aventura. Nuestro objetivo es brindarte experiencias únicas de tubing en ríos espectaculares, con el mejor ambiente y seguridad.</p>
+      <button class="btn btn-moss" onclick="document.getElementById('tours').scrollIntoView({behavior:'smooth'})">Conócenos más ›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOURS ================= -->
+<section class="tours" id="tours">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow center">— Nuestras experiencias —</span>
+      <h2>Aventuras que fluyen</h2>
+    </div>
+    <div class="tour-grid">
+      <div class="tour-card">
+        <div class="tour-photo">
+          <img src="img/Tour2.jpeg" alt="Río Celeste">
+          <span class="tour-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--cream)" stroke-width="1.6"><path d="M3 17c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/><path d="M3 12c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/></svg>
+          </span>
+        </div>
+        <h3>Río Celeste</h3>
+        <p>½ día de aventura</p>
+        <a href="#" class="tour-book" data-tour="Río Celeste" data-precio="18500" onclick="openModal(event,this)">Reservar ›</a>
+      </div>
+      <div class="tour-card">
+        <div class="tour-photo">
+          <img src="img/Tour.jpeg" alt="Río Familiar">
+          <span class="tour-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--cream)" stroke-width="1.6"><path d="M4 20 9 6l4 8 3-5 4 11"/></svg>
+          </span>
+        </div>
+        <h3>Río Familiar</h3>
+        <p>½ día de aventura</p>
+        <a href="#" class="tour-book" data-tour="Río Familiar" data-precio="14000" onclick="openModal(event,this)">Reservar ›</a>
+      </div>
+      <div class="tour-card">
+        <div class="tour-photo">
+          <img src="img/Tour2.jpeg" class="tint-sepia" alt="Río Sunset">
+          <span class="tour-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--cream)" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+          </span>
+        </div>
+        <h3>Río Sunset</h3>
+        <p>día completo</p>
+        <a href="#" class="tour-book" data-tour="Río Sunset" data-precio="24000" onclick="openModal(event,this)">Reservar ›</a>
+      </div>
+      <div class="tour-card">
+        <div class="tour-photo">
+          <img src="img/Tour.jpeg" class="tint-cool" alt="Río Clásico">
+          <span class="tour-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--cream)" stroke-width="1.6"><path d="M12 3 4 9v12h16V9z"/><path d="M9 21v-6h6v6"/></svg>
+          </span>
+        </div>
+        <h3>Río Clásico</h3>
+        <p>½ día de aventura</p>
+        <a href="#" class="tour-book" data-tour="Río Clásico" data-precio="16000" onclick="openModal(event,this)">Reservar ›</a>
+      </div>
+    </div>
+    <div class="tours-cta">
+      <button class="btn btn-moss" onclick="document.getElementById('tours').scrollIntoView({behavior:'smooth'})">Ver todos los tours ›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALERIA ================= -->
+<section class="galeria" id="galeria">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow center">— Galería —</span>
+      <h2>Lo que se ve desde la llanta</h2>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item"><img src="img/Post.jpeg" alt="Vibe River Aventuras"></div>
+      <div class="gal-item"><img src="img/Tour.jpeg" alt="Flotando en calma"></div>
+      <div class="gal-item"><img src="img/Tour2.jpeg" alt="Entre las rocas"></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap foot-grid">
+    <div>
+      <a href="#inicio" class="logo"><span class="logo-main">VIBE</span><span class="logo-sub">RIVER ADVENTURE</span></a>
+      <p class="foot-tag">Explora. Conecta. Fluye.<br>Pura Vida.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#inicio">Home</a>
+      <a href="#tours">Tours</a>
+      <a href="#galeria">Gallery</a>
+      <a href="#contacto">Contact</a>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>+506 ----- - ----</p>
+      <p>----@------.com</p>
+      <p>Costa Rica</p>
+    </div>
+    <div>
+      <h4>Follow the Vibe</h4>
+      <div class="foot-thumbs">
+        <img src="img/Tour.jpeg" alt="">
+        <img src="img/Tour2.jpeg" alt="">
+        <img src="img/Post.jpeg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="wrap bottom-bar">
+    <span>© 2026 Vibe River Adventure. Todos los derechos reservados.</span>
+    <span>Hecho en Costa Rica ♥</span>
+  </div>
+</footer>
+
+<!-- ================= MODAL DE RESERVA ================= -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">✕</button>
+    <span class="eyebrow">— Reservas</span>
+    <h2 id="modalTitle">Aseguremos tu lugar</h2>
+    <p class="modal-sub">Completá tus datos y confirmamos disponibilidad por WhatsApp o correo.</p>
+
+    <form id="resForm">
+      <div class="field-row">
+        <div class="field">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" required placeholder="Tu nombre">
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono / WhatsApp</label>
+          <input type="tel" id="telefono" required placeholder="8888-8888">
+        </div>
+      </div>
+      <div class="field" style="margin-bottom:14px;">
+        <label for="email">Correo</label>
+        <input type="email" id="email" required placeholder="vos@correo.com">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="tour">Ruta</label>
+          <select id="tour">
+            <option data-precio="----">Río Celeste — ------</option>
+            <option data-precio="----">Río Familiar — ------</option>
+            <option data-precio="----">Río Sunset — ------</option>
+            <option data-precio="----">Río Clásico — ------</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" required>
+        </div>
+      </div>
+      <div class="field" style="margin-bottom:14px;">
+        <label for="personas">Cantidad de personas</label>
+        <input type="number" id="personas" min="1" max="20" value="2">
+      </div>
+
+      <div class="res-total">
+        <span class="eyebrow">Total estimado</span>
+        <span class="amount" id="totalAmount">-----</span>
+      </div>
+
+      <button type="submit" class="btn btn-moss" style="width:100%;justify-content:center;">Confirmar reserva</button>
+      <div class="confirm-box" id="confirmBox">¡Listo! Recibimos tu solicitud. Te escribimos por WhatsApp o correo para confirmar cupo y forma de pago.</div>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js?v=3"></script>
+</body>
+</html>
