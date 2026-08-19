@@ -23,7 +23,7 @@ body{
 body::before{
   content:"";
   position:fixed;inset:0;z-index:-1;
-  background:url('../img/RioCeleste.webp') center 30%/cover no-repeat fixed;
+  background:url('../img/Rioceleste.jpeg') center 30%/cover no-repeat fixed;
   filter:brightness(0.85) saturate(1.05);
 }
 body::after{
